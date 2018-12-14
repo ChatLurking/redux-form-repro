@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+input {
+  border: 1px solid #CDCDCD;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: 2px solid #1695A3;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  padding: 1rem;
+}
+
+body, html {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
