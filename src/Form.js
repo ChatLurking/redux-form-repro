@@ -6,16 +6,20 @@ import Amount from './CustomFields/Amount';
 
 const MyForm = ({ min }) => {
   const minValue = minimum(min);
-  const validate = [required, minValue(min)];
+  const validate = [required, minValue];
   return (
-    <Form onSubmit={v => console.log(v)}>
+    <Form onSubmit={(e, v) => {
+      e.preventDefault()
+      console.log(e)
+      console.log(v)
+    }}>
       <Field
         type="number"
         name="amount"
         label={`Donation Amount ($)`}
         required
         component={Amount}
-        validate={[validate]}
+        validate={validate}
       />
       <button type="submit">Submit (check console)</button>
     </Form>
